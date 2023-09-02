@@ -40,7 +40,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home
-  <img src="readme-images/mario_home.png" width="375px" alt="Homepage met alle laatste informatie en leuke animaties>
+  <img src="readme-images/mario_home.jpg" width="375px" alt="Homepage met alle laatste informatie en leuke animaties>
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Characters 
