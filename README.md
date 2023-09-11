@@ -40,7 +40,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home
-  <img src="readme-images/mario_home.jpg" width="375px" alt="Homepage met alle laatste informatie en leuke animaties>
+  <img src="readme-images/mariohome.jpg" width="375px" alt="Homepage met alle laatste informatie en leuke animaties>
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Characters 
@@ -57,6 +57,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - Sommige knoppen zijn erg klein
+  - Soms worden spans/divs gebruikt waar een h-element logischer zou zijn
+  - Onlogische h1
+  - Onlogische headings volgorde
+  - Veel img atributen missen een alt tekst
+  - Video mist captions (is in dit geval misschien ook niet nodig)
+  - Audio heeft geen transscript
+  - a-element wordt vaak niet gebruikt voor linkjes
+  - Niet duidelijk dat sommige linkjes openen op een andere tab/window
+  - Dark/light mode is niet mogelijk
+  - High contrast mode is niet mogelijk
 
 </details>
 
