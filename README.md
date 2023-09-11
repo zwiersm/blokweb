@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Characters 
-  <img src="readme-images/mario_meetbowser.png" width="375px" alt="profielpagina's van mario characters">
+  <img src="readme-images/toadpage.jpg" width="375px" alt="profielpagina's van mario characters">
  
 </details>
 
@@ -68,13 +68,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/homeschets.jpg" width="375px" alt="breakdown van de hele home pagina">
 
+  <img src="readme-images/detailschets.jpg" width="375px" alt="breakdown van de hele detail pagina">
+
+<!-- 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <!-- ### wellicht nog een dynamisch deel (bijv filter): 
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel"> -->
 
 </details>
 

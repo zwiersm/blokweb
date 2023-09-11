@@ -15,8 +15,9 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
+	--color-text:#ffffff;
 	--color-background:#eee;
+	--font-site:'Catamaran'
 }
 
 
@@ -28,4 +29,35 @@
 /****************/
 
 /* jouw code */
+@font-face {
+	font-family: 'Catamaran';
+	src: url('../assets/catamaran-variablefont_wght.ttf');
+	font-style: normal;
+	font-weight: 300;
+}
 
+* {
+	margin: 0;
+}
+
+body {
+	background-image: url(../images/background.png);
+	background-repeat: no-repeat;
+    background-size: cover; /* De afbeelding schalen om de hele achtergrond te bedekken */
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.toad{
+	background-image: url(../image/download.gif);
+	background-repeat: repeat;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+	color: var(--color-text);
+	font-family: var(--font-site);
+}
