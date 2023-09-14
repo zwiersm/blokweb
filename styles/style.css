@@ -32,8 +32,6 @@
 @font-face {
 	font-family: 'Catamaran';
 	src: url('../assets/catamaran-variablefont_wght.ttf');
-	font-style: normal;
-	font-weight: 300;
 }
 
 * {
@@ -57,7 +55,234 @@ img {
 	max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, a{
+h1, h2, h3, h4, h5, h6, p, a, button{
 	color: var(--color-text);
 	font-family: var(--font-site);
+}
+
+/* header {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 1em;
+	justify-content: space-between;
+} */
+
+.header1 {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ac000d;
+    height: 55px;
+    background-color: #e60012;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.header2 {
+	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	display: flex;
+	padding: 0.5em;
+	justify-content: center;
+}
+
+.header2 :first-child {
+	background-color: transparent;
+    border: none;
+	font-size: 0.8em;
+	font-weight: 300;
+}
+
+.header2 :nth-of-type(2){
+	background-color: transparent;
+	border-style: solid;
+	border-color: white;
+	border-radius: 0.4em;
+	padding: 0.7em
+}
+
+.signup a {
+	font-size: 0.9em;
+	font-weight: 600;
+	text-decoration: none;
+	background:none;
+	color: white;
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+.signup img {
+	max-height: 1.3em;
+}
+
+header img {
+	max-height: 1.5em;
+}
+
+a {
+	text-decoration: none;
+	background-color: white;
+	color: black;
+	border: white;
+	border-style: solid;
+	border-color: white;
+	border-radius: 5em;
+	padding: 0.7em 1.3em 0.7em 1.3em;
+	font-weight: 800;
+}
+
+.redbutton {
+	text-decoration: none;
+	background-color: #e60012;
+	color: white;
+	border: #e60012;
+	border-style: solid;
+	border-color: #e60012;
+	border-radius: 5em;
+	padding: 0.4em 1.3em 0.4em 1.3em;
+	font-weight: 800;
+	font-size: 0.8em;
+}
+
+.darkbutton {
+	text-decoration: none;
+	background-color: rgb(52, 52, 53);
+	color: white;
+	border-style: solid;
+	border-color: rgb(52, 52, 53);
+	border-radius: 5em;
+	padding: 0.4em 1.3em 0.4em 1.3em;
+	font-weight: 800;
+	font-size: 0.8em;
+}
+
+a img {
+	max-height: 0.7em;
+	margin-left: 0.5em;
+}
+
+.intro {
+	text-align: center;
+	margin-bottom: 27.6em;
+}
+
+.intro p {
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	line-height: 1.3em;
+	font-weight: 300;
+}
+
+h1{
+	font-size: 1.5em;
+	margin-top: 1.3em;
+}
+
+.titelmario {
+	font-size: 4em;
+	font-weight: 800;
+	line-height: 0.8;
+}
+
+p {
+	margin-bottom: 1.4em;
+	margin-top: 1em;
+	line-height: 1.5em;
+}
+
+h2 {
+	font-size: 2.6em;
+	font-weight: 800;
+	text-align: center;
+	line-height: 1em;
+}
+
+/* .article2 {
+	display: grid;
+    gap: var(--grid-gutter);
+    grid-template-columns: repeat(3,minmax(var(--news-items),1fr));
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    max-width: calc(var(--grid-width) + var(--grid-gutter));
+    padding: 0 var(--grid-gutter);
+    width: auto;
+} */
+
+.article2 {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	padding: 1.7em;
+	border-radius: 0.6em;
+	margin: 0.5em;
+	width: 16em;
+}
+
+.article2 img {
+	max-width: auto;
+	border-radius: 0.3em;
+	margin-bottom: 1em;
+}
+
+.article2 h4,h5{
+	margin-bottom: 1em;
+	line-height: 1.4em;
+	font-size: 1em;
+}
+
+.news {
+	display: flex;
+	overflow-x: auto;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.video {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 7.5em;
+}
+
+.video img {
+	border-radius: 0.7em;
+	border-style: solid;
+	border-color: white;
+	border-width: 0.13em;
+}
+
+.learnmorebutton {
+	margin-bottom: 8em;
+}
+
+
+/* ZORG VOOR LATER */
+ul {
+	display: none;
+}
+
+.zorgvoorlater {
+	display: none;
+}
+
+.article1 {
+	background-image: repeating-linear-gradient(-45deg,#fff,#fff 6px,#fafafa 0,#fafafa 12px);
+    border-radius: 16px;
+    color: #000;
+    padding: 40px 32px;
+    margin: 16px auto 44px;
+    text-align: left;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.article1 p,h3{
+	color: black;
 }

@@ -32,7 +32,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Je website
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
@@ -98,21 +98,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 1 (week 2)
 
-<details>
+<details open>
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+   Ging goed: de header en intro vormgeving. Nog toevoegen: menu + logo Switch
+  <img src="readme-images/ginggoed1.jpg" alt="screenshot header en intro css">
 
+  Ging minder goed: tekst loopt buiten achtergrond
+  <img src="readme-images/gingmindergoed1.jpg" alt="screenshot Mario in the news">
+
+  Ging minder goed: vergeten met css variables te werken
+  <img src="readme-images/gingmindergoed2.png" alt="css variables">
+
+  Ging minder goed: veel classes
+  <img src="readme-images/gingmindergoed3.png" alt="html veel classes">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Maaike Zwiers                    | student 2          | student 3    | student 4        |
+  | ---                              | ---                | ---          | ---              |
+  | Feedback op HTMLFeedback op HTML | en dit             | en ik dit    | en dan ik dat    |
+  | Hoe minder classes?              | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | ...                              | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -188,11 +197,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Maaike Zwiers                    | student 2          | student 3    | student 4        |
+  | ---                              | ---                | ---          | ---              |
+  | Feedback op HTMLFeedback op HTML | en dit             | en ik dit    | en dan ik dat    |
+  | Hoe minder classes?              | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | ...                              | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
