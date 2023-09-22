@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="author" content="Maaike Zwiers">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Nintendo Mario</title>
@@ -11,9 +11,9 @@
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="image/favicon.jpg">
 </head>
+<!-- class op body ipv losse classes -->
 
 <body>
-
 	<header>
 		<div class="header1">
 			<img src="./image/nintendologo.png" alt="">
@@ -39,8 +39,8 @@
 		</ul>
 	</nav>
 
-	<section>
-		<article class="intro">
+	<section class="intro">
+		<article>
 			<h1>Official home of <span class="titelmario">Mario</span></h1>
 			<p>If you're a Mario fan—or even if you've just found out about him today—you've come to the right place!
 				Learn everything there is to know about that multitalented, mustached marvel, and check out the latest
@@ -50,7 +50,7 @@
 		<!-- <article>Hier komt animatie</article> -->
 	</section>
 
-	<article class="article1">
+	<article class="whitecard">
 		<img src="./image/switch-callout.png" alt="">
 		<h3>Play with Mario & friends on Nintendo Switch</h3>
 		<p>The Nintendo Switch™️ system is your invitation to the Mushroom Kingdom. Play with Mario and friends in games
@@ -60,28 +60,28 @@
 
 	<h2>Mario in the news</h2>
 	<section class="news">
-		<article class="article2">
+		<article>
 			<img src="./image/06092023.jpeg" alt="">
 			<h4>6-9-2023</h4>
 			<h5>A new Nintendo Switch - OLED Model: Mario Red Edition System Arrives on Oct. 6 at Select Retailers</h5>
 		</article>
-		<article class="article2">
+		<article>
 			<img src="./image/05092023.jpeg" alt="">
 			<h4>5-9-2023</h4>
 			<h5>Nintendo celebrates the holidays early with bundles for Mario Kart 8 Deluxe and Animal Crossing: New
 				Horizons</h5>
 		</article>
-		<article class="article2">
+		<article>
 			<img src="./image/31082023.jpeg" alt="">
 			<h4>31-8-2023</h4>
 			<h5>Experience the unexpected in Super Mario Bros. Wonder gameplay presentation</h5>
 		</article>
 
 	</section>
+	
+	<a class="buttoncenter" href="">See more news</a>
 
-	<div class="learnmorebutton">
-		<a href="">See more news</a>
-	</div>
+	<div class="ruimte"></div>
 
 	<article class="video">
 		<img src="./image/scmw_trailer_xvJ45zx2-V2.jpeg" alt="">
@@ -90,8 +90,8 @@
 		<a class="darkbutton" href="">Learn more</a>
 	</article>
 
-	<section>
-		<h2>Mario on <br> Nintendo Switch</h2>
+	<h2>Mario on <br> Nintendo Switch</h2>
+	<section class="marioswitch">
 		<article>
 			<img src="./image/mk8deluxe.jpg" alt="">
 			<h4>Mario Kart™ 8 Deluxe</h4>
@@ -123,12 +123,12 @@
 			<p>A total of 48 more courses from throughout the Mario Kart™ series are racing to the Mario Kart 8 Deluxe
 				game as paid DLC**.</p>
 		</article>
-		<a href="">More games</a>
+		<a class="buttoncenter" href="">More games</a>
 	</section>
 
-	<section>
+	<section class="cardswithbutton">
 		<article>
-			<img src="./image/seetimeline2.png" alt="">
+			<img src="./image/png1.png" alt="">
 			<h6>Learn all about Mario's many adventures through the years.</h6>
 			<a href="">See the timeline</a>
 		</article>
@@ -139,7 +139,7 @@
 			<a href="">Meet the characters</a>
 		</article>
 		<article>
-			<img src="./image/playnintendo1.png" alt="">
+			<img src="./image/png2.png" alt="">
 			<h6>Visit Mario' page at Play Nintendo for fun activities that will make even the youngest Mario fans smile.
 			</h6>
 			<a href="">Let's play</a>
