@@ -11,55 +11,56 @@
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="image/favicon.jpg">
 </head>
-<!-- class op body ipv losse classes -->
 
 <body>
+	<!-- <div id="loading-screen">
+        <img src="./image/loading.gif" alt="Loading...">
+    </div> -->
 	<header>
-		<div class="header1">
+		<div class="red-banner">
 			<img src="./image/nintendologo.png" alt="">
 			<div class="signup">
 				<img src="./image/guestlogin.png" alt="">
 				<a href="">Log in / Sign up</a>
 			</div>
 		</div>
-		<div class="header2">
-			<button>Reduced motion</button>
-			<button></button>
+		<div class="reduced-motion">
+			<label for="reduced-motion-button"> Reduced motion</label>
+			<input type="checkbox" id="reduced-motion-button">
 		</div>
-		<img class="zorgvoorlater" src="./image/nintendoswitchlogo.svg" alt="">
 	</header>
 
-	<button class="menu">Menu</button>
+	<button class="menu-button">Menu</button>
 
 	<nav>
-		<button class="closemenu"><img src="./image/kruis.png" alt="" /></button>
+		<button class="close-menu"><img src="./image/kruis.png" alt="" /></button>
 		<ul>
 			<li><a class="active" href="">Home</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Mario history</a></li>
-			<li><a href="./characters.html">Characters</a></li>
-			<li><a href="">News</a></li>
+			<li><a href="https://www.flowbee.nl/">About</a></li>
+			<li><a href="https://www.flowbee.nl/">Mario history</a></li>
+			<li><a id="nav-item" href="./characters.html">Characters</a></li>
+			<li><a href="https://www.flowbee.nl/">News</a></li>
 		</ul>
-		<img class="marioheadnav" src="./image/mario-head.png" alt="">
+		<img class="mario-nav" src="./image/mario-head.png" alt="">
 	</nav>
 
 	<section class="intro">
 		<article>
-			<h1>Official home of <span class="titelmario">Mario</span></h1>
+			<h1>Official home of <span class="titel-mario">Mario</span></h1>
 			<p>If you're a Mario fan—or even if you've just found out about him today—you've come to the right place!
 				Learn everything there is to know about that multitalented, mustached marvel, and check out the latest
 				news, videos, and more.</p>
-			<a href="">Meet Mario! </a>
+			<a href="./detailpage.html">Meet Mario! </a>
 		</article>
 		<!-- <article>Hier komt animatie</article> -->
 	</section>
 
-	<article class="whitecard">
+	<article class="white-card">
 		<img src="./image/switch-callout.png" alt="">
 		<h3>Play with Mario & friends on Nintendo Switch</h3>
 		<p>The Nintendo Switch™️ system is your invitation to the Mushroom Kingdom. Play with Mario and friends in games
 			like Super Mario Bros.™️ Wonder, Mario Kart™️ 8 Deluxe, and many more!</p>
-		<a class="redbutton" href="">Learn more</a>
+		<a class="red-button" href="">Learn more</a>
 	</article>
 
 	<h2>Mario in the news</h2>
@@ -83,19 +84,19 @@
 
 	</section>
 
-	<a class="buttoncenter" href="">See more news</a>
+	<a class="button-center" href="">See more news</a>
 
-	<div class="ruimte"></div>
+	<div class="space"></div>
 
 	<article class="video">
 		<img src="./image/scmw_trailer_xvJ45zx2-V2.jpeg" alt="">
 		<h4>Super Mario Bros. Wonder</h4>
 		<p>Jump into the fun on October 20, 2023</p>
-		<a class="darkbutton" href="">Learn more</a>
+		<a class="dark-button" href="">Learn more</a>
 	</article>
 
 	<h2>Mario on <br> Nintendo Switch</h2>
-	<section class="marioswitch">
+	<section class="mario-switch">
 		<article>
 			<img src="./image/mk8deluxe.jpg" alt="">
 			<h4>Mario Kart™ 8 Deluxe</h4>
@@ -127,65 +128,35 @@
 			<p>A total of 48 more courses from throughout the Mario Kart™ series are racing to the Mario Kart 8 Deluxe
 				game as paid DLC**.</p>
 		</article>
-		<a class="buttoncenter" href="">More games</a>
+		<a class="scroll-trigger" href="">More games</a>
 	</section>
 
-	<section class="cardswithbutton">
+	<section class="cards-with-button">
 		<article>
 			<img src="./image/png1.png" alt="">
 			<p>Learn all about Mario's many adventures through the years.</p>
-			<a href="">See the timeline</a>
+			<a href="https://www.flowbee.nl/">See the timeline</a>
 		</article>
 		<article>
 			<img src="./image/meetthecharacters.png" alt="">
 			<p>From ravishing royalty to menacing monsters, the Mushroom Kingdom has had it's share of memorable
 				characters over the years.</p>
-			<a href="">Meet the characters</a>
+			<a href="https://www.flowbee.nl/">Meet the characters</a>
 		</article>
 		<article>
 			<img src="./image/png2.png" alt="">
 			<p>Visit Mario' page at Play Nintendo for fun activities that will make even the youngest Mario fans smile.
 			</p>
-			<a href="">Let's play</a>
+			<a href="https://www.flowbee.nl/">Let's play</a>
 		</article>
 		<article>
 			<img src="./image/products-burst.png" alt="">
 			<p>Find Mario-themed apparel, toys, and more at the Nintendo store!</p>
-			<a href="">Start shopping</a>
+			<a href="https://www.flowbee.nl/">Start shopping</a>
 		</article>
 	</section>
 
-	<!-- <footer>
-		<a href="">Customer support</a>
-
-		<h4>Follow Nintendo:</h4>
-
-		<ul>
-			<li><img src="./image/logo-facebook.svg" alt=""></li>
-			<li><img src="./image/logo-twitter.svg" alt=""></li>
-			<li><img src="./image/logo-youtube.svg" alt=""></li>
-			<li><img src="./image/logo-instagram.svg" alt=""></li>
-		</ul>
-		<div>
-			<img src="./image/everyoneeveryone.svg" alt="">
-			<img src="./image/logo-esrb-privacy-certified.svg" alt="">
-		</div>
-		<ul>
-			<li><a href="">Privacy Policy</a></li>
-			<li><a href="">Terms of Use</a></li>
-			<li><a href="">Cookie Preferences</a></li>
-			<li><a href="">Interest-Based Ads</a></li>
-		</ul>
-		<p>Game trademarks and copyrights are properties of their respective owners. Nintendo properties are trademarks
-			of Nintendo. © 2020 Nintendo.
-
-			*Additional games, systems and/or accessories may be required for multiplayer mode. Games, systems and some
-			accessories sold separately.
-
-			**Full version of game required to use DLC. Sold separately.</p>
-	</footer> -->
 	<footer>
-
 		<a href="">Customer Support</a>
 
 		<h5>Follow Nintendo:</h5>
@@ -200,6 +171,19 @@
 			<img src="./image/everyoneeveryone.svg" alt="esrb rating guide logo">
 			<img src="./image/logo-esrb-privacy-certified.svg" alt="privacy certified kids esrb logo ">
 		</div>
+		<ul>
+			<li>Privacy Policy</li>
+			<li>Cookie Preferences</li>
+			<li>Interest-Based Ads</li>
+			<li>Terms of Use</li>
+		</ul>
+		<p>Game trademarks and copyrights are properties of their respective owners. Nintendo properties are trademarks
+			of Nintendo. © 2020 Nintendo. </p>
+
+			<p>*Additional games, systems and/or accessories may be required for multiplayer mode. Games, systems and some
+			accessories sold separately.</p>
+
+			<p>**Full version of game required to use DLC. Sold separately.</p>
 	</footer>
 
 	<script defer src="scripts/script.js"></script>
