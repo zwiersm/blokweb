@@ -43,7 +43,6 @@ body {
 	background-repeat: no-repeat;
     background-size: cover; /* De afbeelding schalen om de hele achtergrond te bedekken */
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 .characters {
@@ -67,12 +66,12 @@ img {
 	max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, button{
+h1, h2, h3, h4, h5, h6, p, a, button, li, label{
 	color: var(--color-text);
 	font-family: var(--font-site);
 }
 
-.header1 {
+.red-banner {
 	display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,27 +82,28 @@ h1, h2, h3, h4, h5, h6, p, a, button{
     padding-right: 30px;
 }
 
-.header2 {
+.reduced-motion {
 	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
 	display: flex;
 	padding: 0.5em;
 	justify-content: center;
 }
 
-.header2 :first-child {
-	background-color: transparent;
-    border: none;
-	font-size: 0.8em;
+.reduced-motion :first-child {
+	/* background-color: transparent; */
+    /* border: none; */
+	font-size: 0.9em;
 	font-weight: 300;
+	margin-right: 0.5em;
 }
 
-.header2 :nth-of-type(2){
+/* .reduced-motion :nth-of-type(2){
 	background-color: transparent;
 	border-style: solid;
 	border-color: white;
 	border-radius: 0.4em;
 	padding: 0.7em
-}
+} */
 
 .signup a {
 	font-size: 0.9em;
@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6, p, a, button{
 	font-weight: 300;
 }
 
-.whitecard {
+.white-card {
 	background-image: repeating-linear-gradient(-45deg,#fff,#fff 6px,#fafafa 0,#fafafa 12px);
     border-radius: 16px;
     color: #000;
@@ -145,18 +145,39 @@ h1, h2, h3, h4, h5, h6, p, a, button{
 	margin-right:0.5em;
 }
 
-.whitecard p,h3{
-	color: black;
+
+
+.white-card img {
+	transition: transform 0.3s ease;
+	animation: popUp 1.3s ease 0.3s;
+	animation-delay: 2s; 
+	animation-fill-mode: forwards; /* Behoud de laatste animatiestaat na de animatie */
+  }
+  
+  @keyframes popUp {
+	0% {
+	  opacity: 0;
+	  transform: scale(0.5); 
+	}
+	50% {
+	  opacity: 0.6; 
+	  transform: scale(1.1);
+	}
+	100% {
+	  opacity: 1; 
+	  transform: scale(1); 
+	}
+  }
+  
+
+.white-card img.popUp {
+animation: popUp 1.3s ease 0.3s;
 }
 
 
-
-
-
-
-
-
-
+.white-card p,h3{
+	color: black;
+}
 
 header img {
 	max-height: 1.5em;
@@ -174,7 +195,7 @@ a {
 	font-weight: 800;
 }
 
-.redbutton {
+.red-button {
 	text-decoration: none;
 	background-color: #e60012;
 	color: white;
@@ -187,7 +208,7 @@ a {
 	font-size: 0.8em;
 }
 
-.darkbutton {
+.dark-button {
 	text-decoration: none;
 	background-color: rgb(52, 52, 53);
 	color: white;
@@ -205,7 +226,7 @@ h1{
 	text-align: center;
 }
 
-.titelmario {
+.titel-mario {
 	font-size: 4em;
 	font-weight: 800;
 	line-height: 0.8;
@@ -256,11 +277,11 @@ h2 {
 	width: 13.2em;
 }
 
-.cardswithbutton {
+.cards-with-button {
 	margin-top: 6.4em;
 }
 
-.cardswithbutton article {
+.cards-with-button article {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -271,9 +292,17 @@ h2 {
 	z-index: 1;
 	margin: 0em 0.5em 5.6em 0.5em;
 	align-items: center;
+	opacity: 0; /* Start met een onzichtbaarheid */
+  	transform: translateY(150%); /* Begin onderaan het scherm */
+  	transition: opacity 0.5s ease, transform 1s ease;
 }
 
-.cardswithbutton img {
+.cards-with-button article.slideUp {
+	opacity: 1; /* Laat de artikelen verschijnen */
+	transform: translateY(0); /* Verschuif ze omhoog */
+  }
+
+.cards-with-button img {
 	max-width: 21em;
 	border-radius: 0.3em;
 	z-index: 2;
@@ -281,22 +310,22 @@ h2 {
 	transform: translateY(-18em);
 }
 
-.cardswithbutton :nth-of-type(2) img {
+.cards-with-button :nth-of-type(2) img {
 	max-width: 17em;
 	transform: translateY(-21em);
 }
 
-.cardswithbutton :nth-of-type(3) img {
+.cards-with-button :nth-of-type(3) img {
 	max-width: 19em;
 	transform: translateY(-20.5em);
 }
 
-.cardswithbutton :nth-of-type(4) img {
+.cards-with-button :nth-of-type(4) img {
 	max-width: 17em;
 	transform: translateY(-20.5em);
 }
 
-.cardswithbutton a {
+.cards-with-button a {
 	background-color: #ffdf02;
 	color: black;
 	border-style: solid;
@@ -304,13 +333,11 @@ h2 {
 	margin-bottom: 1em;
 }
 
-.cardswithbutton p {
+.cards-with-button p {
 	margin-bottom: 1em
 }
 
-
-
-.buttoncenter {
+.button-center, .scroll-trigger {
 	margin-left: 30%;
 }
 
@@ -324,7 +351,7 @@ h2 {
 	/* margin-top: 6em; */
 }
 
-.ruimte {
+.space {
 	margin-bottom: 6em;
 }
 
@@ -335,11 +362,11 @@ h2 {
 	border-width: 0.13em;
 }
 
-.marioswitch {
+.mario-switch {
 	margin-top: 1em;
 }
 
-.marioswitch article {
+.mario-switch article {
 	display: flex;
 	flex-direction: column;
 	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
@@ -349,44 +376,44 @@ h2 {
 	margin-bottom: 1.5em;
 }
 
-.marioswitch img {
+.mario-switch img {
 	border-radius: 0.5em;
 }
 
-.marioswitch h4 {
+.mario-switch h4 {
 	margin-top: 1em;
 }
 
-.marioswitch p {
+.mario-switch p {
 	margin-top: 0.2em;
 }
-
-/* footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-footer :first-child {
-	background-color: #ce0010;
-	color: white;
-	border-radius: 10px;
-}
-
-footer :nth-child(4) {
-	display: flex;
-	flex-direction: row;
-}
-
-footer :nth-child(4) img {
-	max-width: 4em;
-} */
 
 footer{
 	display: flex;
 	flex-direction: column;
     margin-top: 10em; 
 	align-items: center; 
+	text-align: center;
+}
+
+footer p {
+	margin:0 0.5em;
+	font-size: 0.7em;
+	line-height: 1.6em;
+	font-weight: 300;
+	color: white;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	font-size: 0.7em;
+	margin: 2em
+}
+
+footer ul li{
+	border: none;
+	border-style: none;
 }
 
 footer a:nth-of-type(1){
@@ -394,11 +421,14 @@ footer a:nth-of-type(1){
 	color: white;
     padding: 0.8em 2em 0.8em 2em;
     text-decoration: none;   
-    border-radius: 0.8em;
+    border-radius: 0.6em;
     display: flex;
     justify-content: center;
     margin: 0em 4em 0em 4em;
-    box-shadow: 0em 0.2em 0.5em #11111186;
+}
+
+footer p:last-of-type{
+	margin-bottom: 4em;
 }
 
 footer h5{
@@ -411,6 +441,19 @@ footer img {
     margin: 0.5em;
     width: 3em;
     border-radius: 0.4em;
+	border-color: white;
+	border-style: solid;
+}
+
+footer div:nth-child(4) img{
+	height: 6em;
+	width: 100%;
+	border-radius: 0;
+}
+
+footer div:nth-child(4) {
+	display: flex;
+	margin-top: 1em;
 }
 
 /* ZORG VOOR LATER */
@@ -509,6 +552,34 @@ footer img {
 	color: white;
 }
 
+.scroll :nth-of-type(2),
+.scroll :nth-of-type(3),
+.scroll :nth-of-type(4),
+.scroll :nth-of-type(5),
+.scroll :nth-of-type(6),
+.scroll :nth-of-type(7),
+.scroll :nth-of-type(8),
+.scroll :nth-of-type(9),
+.scroll :nth-of-type(10),
+.scroll :nth-of-type(11),
+.scroll :nth-of-type(12),
+.scroll :nth-of-type(13),
+.scroll :nth-of-type(14),
+.test {
+  /* background-image: url(../image/pagina2/luigibackground.gif); */
+  animation: slideBackground 10s linear infinite; /* Verander 10s naar de gewenste animatieduur */
+}
+
+@keyframes slideBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
 .scroll article img {
 	max-width: 15em;
 	border-radius: 0.3em;
@@ -576,9 +647,25 @@ nav li {
 	margin: 1.2em;
 }
 
-.marioheadnav {
+.mario-nav {
 	margin: 1.9em 4.8em 0em;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
 }
+
+@keyframes slideFromBottom {
+	from {
+	  transform: translateY(100%);
+	}
+	to {
+	  transform: translateY(0);
+	}
+  }
+  
+  .mario-nav.slideFromBottom {
+	animation: slideFromBottom 1.3s ease 0.3s forwards;
+  }
+
 
 .active {
 	border: white;
@@ -587,11 +674,8 @@ nav li {
 	padding: 0.8em 2em;
 }
 
-/* .menu {
-	display: none;
-} */
 
-.menu {
+.menu-button {
 	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
 	border-color:white;
 	border: white;
@@ -605,41 +689,41 @@ nav li {
 	position: absolute;
 }
 
-.characterdetail {
+.character-detail {
 	display: flex;
 	flex-direction: column;
 	margin-top: 2em;
 }
 
-.characterdetail h2 {
+.character-detail h2 {
 	color: black;
 	margin-bottom: 0.2em;
 	width: auto;
 }
 
-.characterdetail h5 {
+.character-detail h5 {
 	color: black;
 	margin-bottom: 0.2em;
 	width: auto;
 }
 
-.characterdetail h5 {
+.character-detail h5 {
 	margin-right: 1em;
 }
 
-.characterdetail article img {
+.character-detail article img {
 	max-width: 1.5em;
 	margin-right: 0.3em;
 }
 
-.characterdetail article div {
+.character-detail article div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 1.5em;
 }
 
-.characterdetail article div button{
+.character-detail article div button{
 	background-color:#302f2f;
 	border: none;
 	margin:0.3em;
@@ -647,34 +731,79 @@ nav li {
 	padding: 0.5em 1.1em;
 }
 
-.buttonsides {
+.button-sides {
 	display: flex;
 	position: absolute;
 	margin-top: 7em;
 }
 
-.buttonsides img{
+.button-sides img{
 	max-width: 1.2em;
 }
 
-.buttonsides button {
+.button-sides button {
 	background-color:#302f2f;
 	border: none;
 	padding: 1.8em 2em;
 }
 
-.buttonsides button:first-of-type{
+.button-sides button:first-of-type{
 	margin-right: 17.75em;
 }
 
-.buttonsides :first-child {
+.button-sides :first-child {
 	border-radius: 0em 3em 3em 0em;
 }
 
-.buttonsides :last-child {
+.button-sides :last-child {
 	border-radius: 3em 0em 0em 3em;
 }
 
 .hidden {
 	display: none;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Zorg ervoor dat het loading screen bovenaan ligt */
+}
+
+#loading-screen img {
+    width: 100%; 
+	height: 100%;/* Pas de grootte van het GIF-afbeeldingselement aan */
+}
+
+.character-sound {
+	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	border-color:white;
+	border: white;
+	border-style: solid;
+	border-radius: 0.6em;
+	padding: 0.4em 1.2em;
+	font-weight: 700;
+	font-size: 0.7em;
+	margin: 1.5em 0.5em;
+	position: absolute;
+	right: 0;
+}
+
+@media (prefers-reduced-motion) {
+	* {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+.reduced-motion-active * {
+    transition: none !important;
+    animation: none !important;
 }
