@@ -64,11 +64,13 @@ reducedMotionCheckbox.addEventListener("click", function() {
 });
 
 
-if (window.location.pathname === 'index.html' || window.location.pathname === '/') {
+console.log(window.location.pathname);
+
+if (window.location.pathname === '/index.html') {
 ////////////////////////////////////////
 ////  ALLE JAVASCRIPT VOOR HOMEPAGE ////
 ////////////////////////////////////////
-
+console.log('Page1');
 ////////////////
 // LAADSCHERM //
 ////////////////
@@ -104,7 +106,8 @@ window.onload = function () {
 
 } 
 
-else if (window.location.pathname === 'characters.html' || window.location.pathname === '/') {
+else if (window.location.pathname === '/characters.html') {
+console.log('Page2');
 ///////////////////////////////////
 ////  JAVASCRIPT VOOR PAGINA 2 ////
 ///////////////////////////////////
