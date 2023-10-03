@@ -221,19 +221,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/photo1.png" width="375px" alt="header">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Sound op scroll krijgen ben ik trots op, veel nieuwe dingen geleerd qua Jacascript
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/photo2.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Doorklikken naar volgende character niet gelukt. Zie onderkant JS, voor wat ik heb geprobeerd
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/photo3.png" width="375px" alt="bummer">
 </details>
 
 
@@ -245,9 +245,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
 
   1. https://pixabay.com/sound-effects/
   2. http://soundfxcenter.com/download-sound/mario-kart-64-peach-screams-sound-effect/
@@ -257,6 +254,5 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   6. https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
   7. https://chat.openai.com/?model=text-davinci-002-render-sha
   8. https://stackoverflow.com/questions/1120879/css-checkbox-input-styling
-  9. 
 
 </details>
