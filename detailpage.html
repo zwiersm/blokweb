@@ -6,12 +6,11 @@
     <meta name="author" content="Maaike Zwiers">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Nintendo Mario</title>
+    <title>Mario</title>
 
     <link href="styles/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="image/favicon.jpg">
 </head>
-<!-- class op body ipv losse classes -->
 
 <body class="characters">
     <header>
@@ -23,15 +22,17 @@
             </div>
         </div>
 		<div class="reduced-motion">
-			<label for="reduced-motion-button"> Reduced motion</label>
-			<input type="checkbox" id="reduced-motion-button">
+			<label class="label" for="reduced-motion-button"> Reduced motion
+				<input type="checkbox" id="reduced-motion-button">
+				<span class="checkmark"></span>
+			</label>
 		</div>
     </header>
 
     <button class="menu-button">Menu</button>
 
     <nav>
-        <button class="close-menu"><img src="./image/kruis.png" alt="" /></button>
+        <button class="close-menu"><img src="./image/kruis.png" alt=""></button>
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="https://www.flowbee.nl/">About</a></li>
@@ -44,11 +45,11 @@
 
     <main>
         <div class="button-sides">
-            <button><img src="./image/pagina2/pijllinks.png" alt=""></button>
-            <button><img src="./image/pagina2/pijlrechts.png" alt=""></button>
+            <button id="button1"><img src="./image/pagina2/pijllinks.png" alt=""></button>
+            <button id="button2"><img src="./image/pagina2/pijlrechts.png" alt=""></button>
         </div>
         <section class="character-detail">
-            <img src="./image/pagina2/mario-stack-closed.png" alt="">
+            <img src="./image/pagina2/mario-stack-closed.png" alt="Mario is a short character with a bright red hat, blue overalls, and a bushy black mustache. He typically wears white gloves and brown shoes, giving him a friendly and distinctive appearance.">
             <article class="white-card">
                 <h2>Mario</h2>
                 <p>
@@ -66,7 +67,7 @@
                     He uses his masterful jumping ability and a variety of power-ups to take on his archrival, Bowser.
                 </p>
                 <div>
-                    <img src="./image/pagina2/soundicon.svg" alt="">
+                    <img src="./image/pagina2/soundicon.svg" alt="Sound icon">
                     <h5>Sounds</h5>
                     <button>1</button>
                     <button>2</button>
