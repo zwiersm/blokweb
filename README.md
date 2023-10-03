@@ -252,5 +252,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. https://pixabay.com/sound-effects/
   2. http://soundfxcenter.com/download-sound/mario-kart-64-peach-screams-sound-effect/
   3. https://mario.nintendo.com/characters/
+  4. https://www.w3schools.com/tags/att_input_type_checkbox.asp
+  5. https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+  6. https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+  7. https://chat.openai.com/?model=text-davinci-002-render-sha
+  8. https://stackoverflow.com/questions/1120879/css-checkbox-input-styling
+  9. 
 
 </details>

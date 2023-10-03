@@ -1,6 +1,6 @@
-// // JavaScript Document
-console.log("hi");
-
+///////////////
+// VARIABLES //
+///////////////
 var menuButton = document.querySelector('.menu-button');
 var kruisje = document.querySelector('.close-menu');
 var heleNav = document.querySelector('nav');
@@ -9,8 +9,29 @@ var marioHeadNav = document.querySelector('.mario-nav');
 var scrollTrigger = document.querySelector('.scroll-trigger');
 var articlesToSlideUp = document.querySelectorAll('.cards-with-button article');
 
+var reducedMotionCheckbox = document.querySelector(".checkmark");
+
+var sounds = [
+    'sounds/im-luigi.mp3',
+    'sounds/peach.mp3',
+    'sounds/toad.m4a',
+];
+
+var characterSoundButton = document.querySelector(".character-sound");
+
+var articles = document.querySelectorAll('.scroll article');
+
+
+
+//////////////////////////////
+////  JAVASCRIPT ALGEMEEN ////
+//////////////////////////////
+
 heleNav.classList.add('hidden');
 
+////////////////////
+// HAMBURGER MENU //
+////////////////////
 function openMenu() {
     heleNav.classList.remove('hidden');
     menuButton.classList.add('hidden')
@@ -24,30 +45,43 @@ function closeMenu() {
 menuButton.addEventListener("click", openMenu);
 kruisje.addEventListener("click", closeMenu);
 
-// LAADSCHERM
-window.onload = function () {
-    setTimeout(function () {
-        // Verberg het laadscherm na 4 seconden
-        document.getElementById('loading-screen').style.display = 'none';
-        // Toon de rest van de pagina-inhoud
-        document.body.style.overflow = 'visible';
-    }, 1800); // 4000 milliseconden = 4 seconden
-};
 
-
-// MARIO ANIMATIE NAVIGATIE
+//////////////////////////////
+// MARIO ANIMATIE NAVIGATIE //
+//////////////////////////////
 menuButton.addEventListener('click', () => {
-    // Voeg de animatieklasse toe aan .marioheadnav
     marioHeadNav.classList.add('slideFromBottom');
 });
 
 
+////////////////////
+// REDUCED MOTION //
+////////////////////
+reducedMotionCheckbox.addEventListener("click", function() {
+    var reducedMotionContainer = document.querySelector("body");
+        reducedMotionContainer.classList.toggle("reduced-motion-active");
+        console.log('reduced motion toggle');
+});
 
 
-  
+if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+////////////////////////////////////////
+////  ALLE JAVASCRIPT VOOR HOMEPAGE ////
+////////////////////////////////////////
 
+////////////////
+// LAADSCHERM //
+////////////////
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.body.style.overflow = 'visible';
+    }, 1800);
+};
 
-// SCROLL ANIMATIE HOMEPAGE
+/////////////////////////////
+// SCROLL ANIMATIE HOMEPAGE//
+/////////////////////////////
   // Functie om de artikelen omhoog te laten schuiven
   function slideUpArticles() {
     articlesToSlideUp.forEach((article) => {
@@ -68,52 +102,16 @@ menuButton.addEventListener('click', () => {
   // Voeg een event listener toe voor scrollen
   window.addEventListener('scroll', scrollHandler);
 
+} 
 
+else if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
+///////////////////////////////////
+////  JAVASCRIPT VOOR PAGINA 2 ////
+///////////////////////////////////
 
-
-
-// // GELUID OP DE SCROLL
-// function luigiSound() {
-//     var audio = new Audio('sounds/im-luigi.mp3');
-//     audio.play();
-//   }
-
-// function handleIntersection(entries, observer) {
-//     entries.forEach(entry => {
-//       var luigiRect = entry.boundingClientRect;
-//       if (luigiRect.left <= 0) {
-//         luigiSound();
-//         // Voer hier je gewenste acties uit wanneer de linkerkant van het artikel de linkerkant van het viewport raakt
-//         console.log('luigi is nu in beeld');
-//         // Stop de observer als je slechts één keer wilt reageren
-//         observer.unobserve(entry.target);
-//       }
-//     });
-//   }
-  
-//   // Selecteer het artikel dat je wilt observeren
-//   var luigi = document.querySelector('.scroll article:nth-of-type(1)'); 
-  
-//   // Maak een Intersection Observer aan
-//   var observer = new IntersectionObserver(handleIntersection, {
-//     root: null, // Het viewport wordt gebruikt als het root-element
-//     rootMargin: '0px', // Geen marges toegevoegd aan het viewport
-//     threshold: [0] // Observer actief wanneer het artikel volledig in het zicht is
-//   });
-  
-//   // Start het observeren van het artikel
-//   observer.observe(luigi);
-
-// Geluiden voor elk artikel
-var sounds = [
-    'sounds/im-luigi.mp3',
-    'sounds/peach.mp3',
-    'sounds/toad.m4a',
-    // Voeg hier geluidspaden toe voor elk artikel
-];
-
-
-// Functie om een geluid af te spelen
+///////////////////////////////
+// SCROLL SOUND OP CHARACTERS//
+///////////////////////////////
 function playSound(soundIndex) {
     var audio = new Audio(sounds[soundIndex]);
     audio.play();
@@ -132,9 +130,6 @@ function handleIntersection(entries, observer) {
     });
 }
 
-// Selecteer alle <article> elementen binnen .scroll
-var articles = document.querySelectorAll('.scroll article');
-
 // Maak een Intersection Observer voor elk artikel
 articles.forEach((article, index) => {
     var observer = new IntersectionObserver(handleIntersection, {
@@ -147,21 +142,9 @@ articles.forEach((article, index) => {
 
 
 
-
-
-
-
-
-
-  
-
-
-
-
-
-//KNOP OM CHARACTER GELUID AAN TE ZETTEN
-var characterSoundButton = document.querySelector(".character-sound");
-
+//////////////////////////////////////////
+//KNOP OM CHARACTER GELUID AAN TE ZETTEN//
+//////////////////////////////////////////
 function toggleCharacterSound() {
     if (characterSoundButton.textContent === "Character Sound: Off") {
         characterSoundButton.textContent = "Character Sound: On";
@@ -172,25 +155,48 @@ function toggleCharacterSound() {
 
 characterSoundButton.addEventListener("click", toggleCharacterSound);
 
+}
+
+
+
+
 
 //observe en entry.boundingClientRect kunnen uitleggen
-//knop om geluid aan te zetten
   
 
 
-//REDUCED MOTION KNOP
-var reducedMotionCheckbox = document.getElementById("reduced-motion-button");
 
-reducedMotionCheckbox.addEventListener("change", function() {
-    var reducedMotionContainer = document.querySelector("body");
+///////////////////////////
+//CODE WAT NIET GELUKT IS//
+///////////////////////////
+//3E PAGINA KLIKBAAR : WERKT NIET
+// Geprobeerd:
+//  - DOM aanpassen
+//  - Arrays
+//  - Chat GPT
 
-    if (reducedMotionCheckbox.checked) {
-        reducedMotionContainer.classList.add("reduced-motion-active");
-        console.log('reduced motion aan');
-    } else {
-        reducedMotionContainer.classList.remove("reduced-motion-active");
-        console.log('reduced motion uit');
-    }
-});
+// const button1 = document.querySelector('#button1');
+// const button2 = document.querySelector('#button2');
+// const characterImage = document.querySelector('.character-detail img');
+// const characterArticle = document.querySelector('.character-detail article');
 
+// // Functie om de inhoud te wijzigen naar Luigi
+// function changeToLuigi() {
+//     characterImage.src = "./image/pagina2/luigi-stack-closed.png";
+//     characterArticle.querySelector('h2').textContent = "Luigi";
+//     characterArticle.querySelector('p').textContent = "Luigi's beschrijving hier...";
+//     console.log('luigi');
+//     // Voeg hier de rest van de Luigi-gegevens toe
+// }
 
+// // Functie om de inhoud terug te veranderen naar Mario
+// function changeToMario() {
+//     characterImage.src = "./image/pagina2/mario-stack-closed.png";
+//     characterArticle.querySelector('h2').textContent = "Mario";
+//     characterArticle.querySelector('p').textContent = "Mario's beschrijving hier...";
+//     // Voeg hier de rest van de Mario-gegevens toe
+// }
+
+// // Voeg event listeners toe aan de buttons
+// button1.addEventListener('click', changeToMario);
+// button2.addEventListener('click', changeToLuigi);

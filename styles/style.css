@@ -5,30 +5,23 @@
   box-sizing:border-box;  
 }
 
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#ffffff;
-	--color-background:#eee;
+	--color-light:#ffffff; 
+	--color-dark:#000000;
+	--color-background-striped-light:repeating-linear-gradient(-45deg,#fff,#fff 6px,#fafafa 0,#fafafa 12px);;
+	--color-background-striped-dark:repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);;
+	--color-red-light:#e60012;
+	--color-red-dark:#ac000d;
 	--font-site:'Catamaran'
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
-
-/* jouw code */
 @font-face {
 	font-family: 'Catamaran';
 	src: url('../assets/catamaran-variablefont_wght.ttf');
@@ -41,25 +34,14 @@
 body {
 	background-image: url(../images/background.png);
 	background-repeat: no-repeat;
-    background-size: cover; /* De afbeelding schalen om de hele achtergrond te bedekken */
+    background-size: cover;
     max-width: 100%;
 }
 
 .characters {
 	background-image: url(../image/pagina2/backgroundpage2.png);
 	background-repeat: repeat;
-    background-size: cover; /* De afbeelding schalen om de hele achtergrond te bedekken */
-}
-
-
-
-/* .characters p {
-	color: black;
-} */
-
-.toad{
-	background-image: url(../image/download.gif);
-	background-repeat: repeat;
+    background-size: cover;
 }
 
 img {
@@ -67,7 +49,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button, li, label{
-	color: var(--color-text);
+	color: var(--color-light);
 	font-family: var(--font-site);
 }
 
@@ -75,42 +57,33 @@ h1, h2, h3, h4, h5, h6, p, a, button, li, label{
 	display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ac000d;
     height: 55px;
-    background-color: #e60012;
+    background-color: var(--color-red-light);
     padding-left: 30px;
     padding-right: 30px;
 }
 
 .reduced-motion {
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	background-image: var(--color-background-striped-dark);
 	display: flex;
 	padding: 0.5em;
 	justify-content: center;
 }
 
 .reduced-motion :first-child {
-	/* background-color: transparent; */
-    /* border: none; */
 	font-size: 0.9em;
 	font-weight: 300;
 	margin-right: 0.5em;
-}
-
-/* .reduced-motion :nth-of-type(2){
 	background-color: transparent;
-	border-style: solid;
-	border-color: white;
-	border-radius: 0.4em;
-	padding: 0.7em
-} */
+	border: none;
+}
 
 .signup a {
 	font-size: 0.9em;
 	font-weight: 600;
 	text-decoration: none;
 	background:none;
-	color: white;
+	color: var(--color-light);
 	margin: 0;
 	padding: 0;
 	border-style: none;
@@ -134,18 +107,15 @@ h1, h2, h3, h4, h5, h6, p, a, button, li, label{
 }
 
 .white-card {
-	background-image: repeating-linear-gradient(-45deg,#fff,#fff 6px,#fafafa 0,#fafafa 12px);
+	background-image: var(--color-background-striped-light);
     border-radius: 16px;
-    color: #000;
+    color: var(--color-dark);
     padding: 40px 32px;
-    /* margin: 16px auto 44px; */
 	margin: 0em auto 44px;
     text-align: left;
 	margin-left:0.5em;
 	margin-right:0.5em;
 }
-
-
 
 .white-card img {
 	transition: transform 0.3s ease;
@@ -176,7 +146,7 @@ animation: popUp 1.3s ease 0.3s;
 
 
 .white-card p,h3{
-	color: black;
+	color: var(--color-dark);
 }
 
 header img {
@@ -185,11 +155,11 @@ header img {
 
 a {
 	text-decoration: none;
-	background-color: white;
-	color: black;
-	border: white;
+	background-color: var(--color-light);
+	color: var(--color-dark);
+	border: var(--color-light);
 	border-style: solid;
-	border-color: white;
+	border-color: var(--color-light);
 	border-radius: 5em;
 	padding: 0.7em 1.3em 0.7em 1.3em;
 	font-weight: 800;
@@ -197,11 +167,11 @@ a {
 
 .red-button {
 	text-decoration: none;
-	background-color: #e60012;
-	color: white;
-	border: #e60012;
+	background-color: var(--color-red-light);
+	color: var(--color-light);
+	border: var(--color-red-light);
 	border-style: solid;
-	border-color: #e60012;
+	border-color: var(--color-red-light);
 	border-radius: 5em;
 	padding: 0.4em 1.3em 0.4em 1.3em;
 	font-weight: 800;
@@ -211,7 +181,7 @@ a {
 .dark-button {
 	text-decoration: none;
 	background-color: rgb(52, 52, 53);
-	color: white;
+	color: var(--color-light);
 	border-style: solid;
 	border-color: rgb(52, 52, 53);
 	border-radius: 5em;
@@ -256,7 +226,7 @@ h2 {
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	background-image: var(--color-background-striped-dark);
 	padding: 1.7em 1.7em 0em 1.7em;
 	border-radius: 0.6em;
 	margin: 0.5em;
@@ -265,7 +235,7 @@ h2 {
 }
 
 .news article img {
-	max-width: auto;
+	width: auto;
 	border-radius: 0.3em;
 	margin-bottom: 1em;
 }
@@ -285,21 +255,21 @@ h2 {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	background-image: var(--color-background-striped-dark);
 	padding: 15em 1em 1em 1em;
 	border-radius: 0.6em;
 	text-align: center;
 	z-index: 1;
 	margin: 0em 0.5em 5.6em 0.5em;
 	align-items: center;
-	opacity: 0; /* Start met een onzichtbaarheid */
-  	transform: translateY(150%); /* Begin onderaan het scherm */
+	opacity: 0;
+  	transform: translateY(150%);
   	transition: opacity 0.5s ease, transform 1s ease;
 }
 
 .cards-with-button article.slideUp {
-	opacity: 1; /* Laat de artikelen verschijnen */
-	transform: translateY(0); /* Verschuif ze omhoog */
+	opacity: 1;
+	transform: translateY(0);
   }
 
 .cards-with-button img {
@@ -327,7 +297,7 @@ h2 {
 
 .cards-with-button a {
 	background-color: #ffdf02;
-	color: black;
+	color: var(--color-dark);
 	border-style: solid;
 	border-color: #ffdf02;
 	margin-bottom: 1em;
@@ -348,7 +318,6 @@ h2 {
 	margin-left: 1em;
 	margin-right: 1em;
 	margin-bottom: 5em;
-	/* margin-top: 6em; */
 }
 
 .space {
@@ -358,7 +327,7 @@ h2 {
 .video img {
 	border-radius: 0.7em;
 	border-style: solid;
-	border-color: white;
+	border-color: var(--color-light);
 	border-width: 0.13em;
 }
 
@@ -369,7 +338,7 @@ h2 {
 .mario-switch article {
 	display: flex;
 	flex-direction: column;
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	background-image: var(--color-background-striped-dark);
 	padding: 1em 1em 0em 1em;
 	border-radius: 0.6em;
 	margin: 0.5em;
@@ -401,7 +370,7 @@ footer p {
 	font-size: 0.7em;
 	line-height: 1.6em;
 	font-weight: 300;
-	color: white;
+	color: var(--color-light);
 }
 
 footer ul {
@@ -417,8 +386,8 @@ footer ul li{
 }
 
 footer a:nth-of-type(1){
-    background-color: #ce0010;
-	color: white;
+    background-color: var(--color-red-light);
+	color: var(--color-light);
     padding: 0.8em 2em 0.8em 2em;
     text-decoration: none;   
     border-radius: 0.6em;
@@ -441,7 +410,7 @@ footer img {
     margin: 0.5em;
     width: 3em;
     border-radius: 0.4em;
-	border-color: white;
+	border-color: var(--color-light);
 	border-style: solid;
 }
 
@@ -456,16 +425,11 @@ footer div:nth-child(4) {
 	margin-top: 1em;
 }
 
-/* ZORG VOOR LATER */
-
-.zorgvoorlater {
-	display: none;
-}
-
 .scroll {
 	display: flex;
 	overflow-x: auto;
 	margin-bottom: 25em;
+	scroll-snap-type:x mandatory;
 }
 
 .scroll article {
@@ -476,12 +440,11 @@ footer div:nth-child(4) {
 	margin: 0.5em;
 	margin-bottom: 2em;
 	background-image: url(../image/pagina2/mariobackground.gif);
+	scroll-snap-align: center;
 }
 
-
-
 .scroll :nth-of-type(1) h3 {
-	color: white;
+	color: var(--color-light);
 }
 
 .scroll :nth-of-type(2) {
@@ -497,7 +460,7 @@ footer div:nth-child(4) {
 }
 
 .scroll :nth-of-type(4) h3 {
-	color: white;
+	color: var(--color-light);
 }
 
 .scroll :nth-of-type(5) {
@@ -521,7 +484,7 @@ footer div:nth-child(4) {
 }
 
 .scroll :nth-of-type(9) h3 {
-	color: white;
+	color: var(--color-light);
 }
 
 .scroll :nth-of-type(10) {
@@ -541,7 +504,7 @@ footer div:nth-child(4) {
 }
 
 .scroll :nth-of-type(13) h3 {
-	color: white;
+	color: var(--color-light);
 }
 
 .scroll :nth-of-type(14) {
@@ -549,7 +512,7 @@ footer div:nth-child(4) {
 }
 
 .scroll :nth-of-type(14) h3 {
-	color: white;
+	color: var(--color-light);
 }
 
 .scroll :nth-of-type(2),
@@ -566,8 +529,7 @@ footer div:nth-child(4) {
 .scroll :nth-of-type(13),
 .scroll :nth-of-type(14),
 .test {
-  /* background-image: url(../image/pagina2/luigibackground.gif); */
-  animation: slideBackground 10s linear infinite; /* Verander 10s naar de gewenste animatieduur */
+  animation: slideBackground 10s linear infinite;
 }
 
 @keyframes slideBackground {
@@ -600,25 +562,20 @@ footer div:nth-child(4) {
 	margin: 0;
 }
 
-/* .characters h1, p {
-	color: black;
-	text-align: center;
-} */
-
 .characters h1 {
 	font-size: 3em;
 	margin: 1em 0em 0em 0em;
-	color: black;
+	color: var(--color-dark);;
 }
 
-.characters p {
+.characters main p:first-of-type {
 	margin: 0em 0.5em 1em 0.5em;
-	color: black;
+	color: var(--color-dark);;
 	text-align: center;
 }
 
 nav {
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
+	background-image: var(--color-background-striped-dark);
 }
 
 nav button {
@@ -632,7 +589,7 @@ nav a {
 	text-decoration: none;
 	background-color: transparent;
 	border-color: transparent;
-	color: white;
+	color: var(--color-light);
 }
 
 nav ul {
@@ -668,7 +625,7 @@ nav li {
 
 
 .active {
-	border: white;
+	border: var(--color-light);
 	border-style: solid;
 	border-radius: 0.6em;
 	padding: 0.8em 2em;
@@ -676,9 +633,9 @@ nav li {
 
 
 .menu-button {
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
-	border-color:white;
-	border: white;
+	background-image: var(--color-background-striped-dark);
+	border-color:var(--color-light);
+	border: var(--color-light);
 	border-style: solid;
 	border-radius: 0.6em;
 	padding: 0.4em 1.2em;
@@ -696,13 +653,13 @@ nav li {
 }
 
 .character-detail h2 {
-	color: black;
+	color: var(--color-dark);
 	margin-bottom: 0.2em;
 	width: auto;
 }
 
 .character-detail h5 {
-	color: black;
+	color: var(--color-dark);
 	margin-bottom: 0.2em;
 	width: auto;
 }
@@ -769,23 +726,23 @@ nav li {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--color-light);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Zorg ervoor dat het loading screen bovenaan ligt */
+    z-index: 9999;
 }
 
 #loading-screen img {
     width: 100%; 
-	height: 100%;/* Pas de grootte van het GIF-afbeeldingselement aan */
+	height: 100%;
 }
 
 .character-sound {
-	background-image: repeating-linear-gradient(-45deg,#302f2f,#302f2f 6px,#2a2929 0,#2a2929 12px);
-	border-color:white;
-	border: white;
+	background-image: var(--color-background-striped-dark);
+	border-color:var(--color-light);
+	border: var(--color-light);
 	border-style: solid;
 	border-radius: 0.6em;
 	padding: 0.4em 1.2em;
@@ -796,6 +753,8 @@ nav li {
 	right: 0;
 }
 
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
 @media (prefers-reduced-motion) {
 	* {
         transition: none !important;
@@ -806,4 +765,53 @@ nav li {
 .reduced-motion-active * {
     transition: none !important;
     animation: none !important;
+}
+
+
+
+/* CUSTOM CHECKBOX */
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+  .label input {
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	width: 0;
+  }
+
+  .checkmark {
+	position: absolute;
+	margin-left: 0.8em;
+	height: 22px;
+	width: 22px;
+	background-color: transparent;
+	border-style: solid;
+	border-color: var(--color-light);
+	border-radius: 0.4em;
+	padding: 0.5em;
+  }
+  
+  .label input:checked ~ .checkmark {
+	background-color: var(--color-red-dark);
+  }
+  
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  .label input:checked ~ .checkmark:after {
+	display: block;
+  }
+
+  .label .checkmark:after {
+	left: 7px;
+	top: 3px;
+	width: 5px;
+	height: 10px;
+	border: solid var(--color-light);
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+	align-items: center;
+	justify-content: center;
 }
