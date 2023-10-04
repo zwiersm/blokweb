@@ -97,12 +97,13 @@ console.log('Page1');
 ////////////////
 // LAADSCHERM //
 ////////////////
-window.onload = function () {
-    setTimeout(function () {
-        document.getElementById('loading-screen').style.display = 'none';
-        document.body.style.overflow = 'visible';
-    }, 1800);
-};
+
+// window.onload = function () {
+//     setTimeout(function () {
+//         document.getElementById('loading-screen').style.display = 'none';
+//         document.body.style.overflow = 'visible';
+//     }, 1800);
+// };
 
 /////////////////////////////
 // SCROLL ANIMATIE HOMEPAGE//
