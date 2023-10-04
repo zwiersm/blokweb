@@ -64,12 +64,35 @@ reducedMotionCheckbox.addEventListener("click", function() {
 });
 
 
-console.log(window.location.pathname);
+// console.log(window.location.pathname);
 
-if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+// if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+
+
+
+
+
+
+
+// Deze code haalt de huidige url op zodat enkel de code van de gewenste pagina gaat draaien.
+// Dit... omdat er anders errors voorkomen in de console omdat de browser de classes niet herkent bij de eventlisteners.
+var huidigeURL = window.location.href;
+var homepageURLOne = "https://zwiersm.github.io/blokweb/index.html";
+var homepageURLTwo = "http://127.0.0.1:5500/index.html";
+var homepageURLThree = "http://127.0.0.1:5500/"
+var charactersURLOne = "http://127.0.0.1:5500/characters.html";
+var charactersURLTwo = "https://zwiersm.github.io/blokweb/characters.html";
+
+console.log(huidigeURL);
+
+document.addEventListener('DOMContentLoaded', pageChecker)
 ////////////////////////////////////////
 ////  ALLE JAVASCRIPT VOOR HOMEPAGE ////
 ////////////////////////////////////////
+function pageChecker(){
+// if (huidigeURL.indexOf("http://127.0.0.1:5500/index.html") || huidigeURL.indexOf("https://zwiersm.github.io/blokweb/index.html")){
+if (huidigeURL === homepageURLOne || huidigeURL === homepageURLTwo || huidigeURL === homepageURLThree){
+
 console.log('Page1');
 ////////////////
 // LAADSCHERM //
@@ -104,10 +127,10 @@ window.onload = function () {
   // Voeg een event listener toe voor scrollen
   window.addEventListener('scroll', scrollHandler);
 
-} 
+// } if (huidigeURL.indexOf("characters.html") || huidigeURL.indexOf("http://127.0.0.1:5500/characters.html")){
+} if (huidigeURL === charactersURLOne || huidigeURL === charactersURLTwo){
 
-else if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
-console.log('Page2');
+    console.log('Page2');
 ///////////////////////////////////
 ////  JAVASCRIPT VOOR PAGINA 2 ////
 ///////////////////////////////////
@@ -149,6 +172,7 @@ articles.forEach((article, index) => {
 //KNOP OM CHARACTER GELUID AAN TE ZETTEN//
 //////////////////////////////////////////
 function toggleCharacterSound() {
+    console.log('klik gedetecteerd op sound button')
     if (characterSoundButton.textContent === "Character Sound: Off") {
         characterSoundButton.textContent = "Character Sound: On";
     } else {
@@ -158,7 +182,21 @@ function toggleCharacterSound() {
 
 characterSoundButton.addEventListener("click", toggleCharacterSound);
 
-}
+} 
+// else if (huidigeURL.indexOf("detailpagina.html")) {
+
+// }
+
+};
+
+// if (window.location.pathname === 'characters.html' || window.location.pathname === '/') 
+
+// const charactersPage = document.querySelector('.characters');
+// charactersPage.addEventListener('DOMContentLoaded', pageTwo);
+
+// function pageTwo(){
+
+// };
 
 
 
