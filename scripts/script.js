@@ -66,7 +66,7 @@ reducedMotionCheckbox.addEventListener("click", function() {
 
 console.log(window.location.pathname);
 
-if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+// if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
 ////////////////////////////////////////
 ////  ALLE JAVASCRIPT VOOR HOMEPAGE ////
 ////////////////////////////////////////
@@ -104,10 +104,10 @@ window.onload = function () {
   // Voeg een event listener toe voor scrollen
   window.addEventListener('scroll', scrollHandler);
 
-} 
+// } 
 
-if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
-console.log('Page2');
+// if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
+// console.log('Page2');
 ///////////////////////////////////
 ////  JAVASCRIPT VOOR PAGINA 2 ////
 ///////////////////////////////////
@@ -158,7 +158,7 @@ function toggleCharacterSound() {
 
 characterSoundButton.addEventListener("click", toggleCharacterSound);
 
-}
+// }
 
 
 
