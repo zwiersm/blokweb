@@ -14,7 +14,7 @@ var reducedMotionCheckbox = document.querySelector(".checkmark");
 var sounds = [
     'sounds/im-luigi.mp3',
     'sounds/peach.mp3',
-    'sounds/toad.m4a',
+    'sounds/toad.mp3',
 ];
 
 var characterSoundButton = document.querySelector(".character-sound");
