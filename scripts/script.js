@@ -66,7 +66,7 @@ reducedMotionCheckbox.addEventListener("click", function() {
 
 console.log(window.location.pathname);
 
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
 ////////////////////////////////////////
 ////  ALLE JAVASCRIPT VOOR HOMEPAGE ////
 ////////////////////////////////////////
@@ -106,7 +106,7 @@ window.onload = function () {
 
 } 
 
-else if (window.location.pathname === '/characters.html') {
+else if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
 console.log('Page2');
 ///////////////////////////////////
 ////  JAVASCRIPT VOOR PAGINA 2 ////
