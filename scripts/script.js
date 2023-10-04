@@ -106,7 +106,7 @@ window.onload = function () {
 
 } 
 
-if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
+else if (window.location.pathname === '/characters.html' || window.location.pathname === '/') {
 console.log('Page2');
 ///////////////////////////////////
 ////  JAVASCRIPT VOOR PAGINA 2 ////
